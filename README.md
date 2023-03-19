@@ -1,2 +1,2 @@
 # Test
-This a a project testing features of Nextjs
+This a project testing features of Nextjs
