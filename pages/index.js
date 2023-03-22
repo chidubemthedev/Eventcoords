@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Eventlist from "@/components/events/event-list";
 import { getFeaturedEvents } from "@/helpers/api-util";
 // import { getFeaturedEvents } from "@/dummy-data"
@@ -8,6 +9,10 @@ const HomePage = (props) => {
 
   return (
     <div>
+      <Head>
+        <title>Events</title>
+        <meta name="description" content="Event for meetups." />
+      </Head>
       <Eventlist items={events} />
     </div>
   );

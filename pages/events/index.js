@@ -1,6 +1,7 @@
 import Eventlist from "@/components/events/event-list";
 import EventSearch from "@/components/events/events-search";
 import { getAllEvents } from "@/helpers/api-util";
+import Head from "next/head";
 // import { getAllEvents } from "@/dummy-data";
 import { useRouter } from "next/router";
 
@@ -17,6 +18,10 @@ const AllEventsPage = (props) => {
 
   return (
     <>
+    <Head>
+        <title>All Events</title>
+        <meta name="description" content="Event for meetups." />
+      </Head>
       <EventSearch onSearch={findEventsHandler} />
       <Eventlist items={events} />
     </>
